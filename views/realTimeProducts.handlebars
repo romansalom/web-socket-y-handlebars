@@ -1,0 +1,56 @@
+<div><h1>Bienvenidos</h1>
+<div>
+    <h2>Agregar Productos:</h2>
+  <form class="formulario" method="GET">
+    <label for="nombre">Nombre: </label>
+    <input
+      id="nombre"
+      type="text"
+      placeholder="Ingrese un nombre"
+      name="nombre"
+    />
+    </br>
+
+    <label for="precio">Precio: </label>
+    <input
+      id="precio"
+      type="text"
+      placeholder="Ingrese un Precio"
+      name="precio"
+    />
+    </br>
+   
+    <label for="quantity">quantity: </label>
+    <input
+      id="quantity"
+      type="text"
+      placeholder="Ingrese el Stock"
+      name="stock"
+    />
+    </br>
+    <button type="submit">Agregar</button>
+  </form>
+</div>
+<div>
+    <h2>Eliminar Producto:</h2>
+    <p>Debe ingresar el ID del producto que desea eliminar.</p>
+     <form class="formularioEliminar" method="GET">
+    <label for="idDelete">ID: </label>
+    <input
+      id="idDelete"
+      type="text"
+      placeholder="Ingrese el ID"
+      name="idDelete"
+    />
+    </br>
+    <button type="submit" id="botonGP">Eliminar</button>
+  </form>
+</div>
+
+<h2>Los productos disponibles en Tiempo Real</h2>
+<div id="productsRealTime">
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/cargadeProductos.js"></script>
